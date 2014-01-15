@@ -1,0 +1,27 @@
+R
+R Rect
+R Rect 1
+R Rect 1 5
+R Rect 1 5 5
+R Rect 1 5 5 5 5
+R R_ect 1 5 10 10
+R *Rect 1 5 10 10
+R Rect ab1 5 10 10
+R Rect ab 5 10 10
+R Rect -ab 5 10 10
+R Rect 1 ab5 10 10
+R Rect 1 ab 10 10
+R Rect 1 -ab 10 10
+R Rect --1 5 10 10
+R Rect ++1 5 10 10
+R Rect 1 --5 10 10
+R Rect 1 ++5 10 10
+R Rect 1 5 a 10
+R Rect 1 5 -a 10
+R Rect 1 5 10 a
+R Rect 1 5 -10 -5a0
+R Rect 1 5 10 ++10
+R Rect 1 5 -10 --10
+R Rect -9223372036854775809 5 10 8
+R Rect 9223372036854775808 5 10 8
+EXIT

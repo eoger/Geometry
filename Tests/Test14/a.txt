@@ -1,0 +1,4 @@
+L a1 10 10 -10 -10
+LOAD b.txt
+OA z99 a1 b2
+LIST

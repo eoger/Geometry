@@ -1,0 +1,11 @@
+R Rect 4 4 4 4
+C Cercle 5 4 3
+L Ligne 1 2 3 4
+PL PolyL 1 2 3 4 5 6
+OA oa1 Cercle Ligne PolyL
+OA oa2 oa1 PolyL Rect
+OA oa3 oa1 oa2
+LIST
+CLEAR
+LIST
+EXIT

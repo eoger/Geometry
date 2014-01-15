@@ -1,0 +1,42 @@
+OK
+OK
+OK
+C Cercle1 5 5 5
+C Cercle2 5 5 5
+C Cercle3 5 5 5
+ERR
+C Cercle1 5 5 5
+C Cercle2 5 5 5
+C Cercle3 5 5 5
+OK
+C Cercle3 5 5 5
+OK
+ERR
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+C Cercle 5 5 5
+L Ligne 1 2 3 4
+OA oa1 Cercle Ligne PolyL
+OA oa2 PolyL Rect oa1
+OA oa3 oa1 oa2
+PL PolyL 1 2 3 4 5 6
+R Rect 1 2 3 4
+OK
+C Cercle 5 5 5
+L Ligne 1 2 3 4
+OA oa1 Cercle Ligne
+OA oa2 Rect oa1
+OA oa3 oa1 oa2
+R Rect 1 2 3 4
+OK
+C Cercle 5 5 5
+L Ligne 1 2 3 4
+OA oa1 Cercle Ligne
+OA oa3 oa1
+R Rect 1 2 3 4
+

@@ -1,0 +1,20 @@
+PL 
+PL Polyligne 
+PL Polyligne 58
+PL Polyligne 99 351
+PL Polyligne 59 01 848
+PL Poly$zsdz 11 13 999 12
+PL Polyligne a57 1 1 5
+PL Polyligne 2 2 8 9 b
+PL Polyligne 57 --1 1 45
+PL Polyligne 57 1 1 ++45
+PL Polyligne 57 1 81 45bh
+PL Polyligne 57 1 o1 45
+PL Polyligne 57 \1 1 45
+PL Polyligne 57 Y1 1 ++45
+PL Polyligne 57 1 1 9223372036854775808 
+PL Polyligne 1053 84 3 841 56
+PL Polyligne 10 9 8 7 5 6 4
+PL Polyligne 1053 84 3 841 56 88 11
+PL Polyligne 10 9 8 7 5 6 4 1 33 55 11
+EXIT

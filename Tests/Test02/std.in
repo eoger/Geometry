@@ -1,0 +1,27 @@
+C
+C Cercle
+C Cercle 1
+C Cercle 1 5
+C Cercle 1 5 5 5
+C C_ercle 1 5 10
+C *Cercle 1 5 10
+C Cercle ab1 5 10
+C Cercle ab 5 10
+C Cercle -ab 5 10
+C Cercle 1 ab5 10
+C Cercle 1 ab 10
+C Cercle 1 -ab 10
+C Cercle --1 5 10
+C Cercle ++1 5 10
+C Cercle 1 --5 10
+C Cercle 1 ++5 10
+C Cercle 1 5 -10
+C Cercle 1 5 a
+C Cercle 1 5 -a
+C Cercle -9223372036854775809 5 5
+C Cercle 9223372036854775808 5 5
+C Cercle 5 -9223372036854775809 5
+C Cercle 5 9223372036854775808 5
+C Cercle 5 1 18446744073709551616
+C Cercle 1 5 0
+EXIT

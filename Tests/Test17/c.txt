@@ -1,0 +1,5 @@
+C def 5 5 5
+R efg 8 8 10 10
+PL bcd 1 8 6 0 7 7
+L abc 0 3 0 4
+OA poa def bcd

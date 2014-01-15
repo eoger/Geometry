@@ -1,0 +1,9 @@
+C cercle 52 52 1
+LIST
+LOAD a.txt
+LIST
+LOAD b.txt
+LIST
+LOAD c.txt
+LIST
+EXIT

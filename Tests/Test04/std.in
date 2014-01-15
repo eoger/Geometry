@@ -1,0 +1,9 @@
+C Cercle1 5 5 5
+OA
+OA N_om Cercle1
+OA Nom C*ercle1
+OA Nom ObjNonExistant
+OA Nom ObjNonExistant1 ObjNonExistant2
+OA Nom Cercle1 ObjNonExistant
+OA Nom Nom
+EXIT

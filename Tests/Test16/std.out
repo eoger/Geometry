@@ -1,0 +1,21 @@
+OK
+OK
+R Rect 40 40 -10 -10
+C zc1 1 1 9
+OK
+OK
+OK
+L ligneeee 0 0 1 1
+OA Magg Rect ligneeee
+PL plpl 1 1 1 2 2 2
+R Rect 40 40 -10 -10
+C zc1 1 1 9
+OK
+OK
+OA 0ui Magg Rect zc1
+C a 8 8 8
+L ligneeee 0 0 1 1
+OA Magg Rect ligneeee
+PL plpl 1 1 1 2 2 2
+R Rect 40 40 -10 -10
+C zc1 1 1 9

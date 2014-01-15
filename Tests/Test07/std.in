@@ -1,0 +1,23 @@
+C Cercle1 5 -5 +5
+C Cercle1 5 -5 +65
+LIST
+CLEAR
+R Rect2 5 -5 +5 -5
+R Rect2 5 -5 +5 -5
+LIST
+CLEAR
+L Ligne3 5 -8 +9 -4
+L Ligne3 5 -8 +9 -4
+LIST
+CLEAR
+PL poly4 -5 5 +3 2 4 8 +5 -9
+PL poly4 -5 5 +3 2 4 8 +5 -9
+LIST
+CLEAR
+C Cercle1 5 -5 +5
+L Ligne3 5 -8 +9 -4
+OA 5OA Cercle1 Ligne3
+OA 5OA Cercle1 Ligne3
+LIST
+CLEAR
+EXIT

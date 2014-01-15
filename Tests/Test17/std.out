@@ -1,0 +1,13 @@
+OK
+C cercle 52 52 1
+ERR
+C cercle 52 52 1
+ERR
+C cercle 52 52 1
+OK
+L abc 0 3 0 4
+PL bcd 1 8 6 0 7 7
+C cercle 52 52 1
+C def 5 5 5
+R efg 8 8 10 10
+OA poa bcd def

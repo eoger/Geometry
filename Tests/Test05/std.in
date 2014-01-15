@@ -1,0 +1,27 @@
+L
+L Ligne
+L Ligne 1
+L Ligne 1 5
+L Ligne 1 5 5
+L Ligne 1 5 5 5 5
+L L_igne 1 5 10 10
+L *Ligne 1 5 10 10
+L Ligne ab1 5 10 10
+L Ligne ab 5 10 10
+L Ligne -ab 5 10 10
+L Ligne 1 ab5 10 10
+L Ligne 1 ab 10 10
+L Ligne 1 -ab 10 10
+L Ligne --1 5 10 10
+L Ligne ++1 5 10 10
+L Ligne 1 --5 10 10
+L Ligne 1 ++5 10 10
+L Ligne 1 5 a 10
+L Ligne 1 5 -a 10
+L Ligne 1 5 10 a
+L Ligne 1 5 -10 -5a0
+L Ligne 1 5 10 ++10
+L Ligne 1 5 -10 --10
+L Ligne -9223372036854775809 5 10 8
+L Ligne 9223372036854775808 5 10 8
+EXIT

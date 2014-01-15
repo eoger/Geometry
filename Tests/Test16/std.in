@@ -1,0 +1,11 @@
+C zc1 1 1 9
+R Rect 40 40 -10 -10
+LIST
+L ligneeee 0 0 1 1
+OA Magg ligneeee Rect
+PL plpl 1 1 1 2 2 2
+LIST
+C a 8 8 8
+OA 0ui Rect zc1 Magg
+LIST
+EXIT
