@@ -30,6 +30,11 @@ bool LoadCommand::Execute ( Model * model )
 		std::string cmd;
 		
 		getline ( file , cmd );
+
+		if ( cmd == "" )
+		{
+			continue;
+		}
 		
 		if ( !boost::regex_search ( cmd , matches , regex ) )
 		{

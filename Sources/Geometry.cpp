@@ -44,6 +44,11 @@ int Geometry::Parse ( std::string cmd , bool storeCmd )
 	boost::smatch matches;
 	boost::regex regex (
 		"^((?:C|R|L|PL|OA|DELETE|MOVE|LOAD|SAVE) |(?:LIST|UNDO|REDO|CLEAR|#)$)" );
+
+	if ( cmd == "" )
+	{
+		return CMD_VOID;
+	}
 	
 	if ( !boost::regex_search ( cmd , matches , regex ) )
 	{
