@@ -4,11 +4,12 @@
 #include <set>
 #include <stack>
 
-Aggregate::Aggregate ( std::string element , std::map < std::string , GeoElement * > & elements ) :
+Aggregate::Aggregate ( std::string element ,
+	std::map < std::string , GeoElement * > & elements ) :
 	GeoElement ( element ), m_elements ( elements )
 {
-	for ( std::map < std::string , GeoElement * >::iterator it = m_elements.begin ( ) ;
-		it != m_elements.end ( ) ; ++it )
+	for ( std::map < std::string , GeoElement * >::iterator it =
+		m_elements.begin ( ) ; it != m_elements.end ( ) ; ++it )
 	{
 		it->second->AddObserver ( m_name , this );
 	}
@@ -16,8 +17,8 @@ Aggregate::Aggregate ( std::string element , std::map < std::string , GeoElement
 
 Aggregate::~Aggregate ( )
 {
-	for ( std::map < std::string , GeoElement * >::iterator it = m_elements.begin ( ) ;
-		it != m_elements.end ( ) ; ++it )
+	for ( std::map < std::string , GeoElement * >::iterator it =
+		m_elements.begin ( ) ; it != m_elements.end ( ) ; ++it )
 	{
 		it->second->RemoveObserver ( m_name );
 	}
@@ -42,8 +43,8 @@ std::string Aggregate::Description ( )
 {
 	std::stringstream str;
 	str << "OA " << m_name;
-	for ( std::map < std::string , GeoElement * >::iterator it = m_elements.begin ( ) ;
-		it != m_elements.end ( ) ; ++it )
+	for ( std::map < std::string , GeoElement * >::iterator it =
+		m_elements.begin ( ) ; it != m_elements.end ( ) ; ++it )
 	{
 		GeoElement * el = it->second;
 		str << " " << el->GetNom ( );
@@ -54,7 +55,8 @@ std::string Aggregate::Description ( )
 bool Aggregate::AddElement ( GeoElement * elt )
 {
 	std::string name = elt->GetNom ( );
-	std::map < std::string , GeoElement * >::iterator it = m_elements.find ( name );
+	std::map < std::string , GeoElement * >::iterator it = m_elements.find (
+		name );
 	if ( it != m_elements.end ( ) )
 	{
 		return false;
@@ -71,24 +73,25 @@ std::vector < GeoElement * > Aggregate::GetBasicElements ( )
 	std::vector < GeoElement * > basicElements;
 	std::stack < GeoElement * > toVisit;
 	std::set < GeoElement * > visited;
-
+	
 	toVisit.push ( this );
-
-	while ( ! toVisit.empty ( ) )
+	
+	while ( !toVisit.empty ( ) )
 	{
 		GeoElement * el = toVisit.top ( );
 		toVisit.pop ( );
-
-		if ( visited.find(el) == visited.end() )
+		
+		if ( visited.find ( el ) == visited.end ( ) )
 		{
-			visited.insert(el);
-
+			visited.insert ( el );
+			
 			if ( Aggregate *pAggregate = dynamic_cast < Aggregate* > ( el ) )
 			{
-				for ( std::map < std::string , GeoElement * >::iterator it = pAggregate->m_elements.begin ( ) ; 
+				for ( std::map < std::string , GeoElement * >::iterator it =
+					pAggregate->m_elements.begin ( ) ;
 					it != pAggregate->m_elements.end ( ) ; ++it )
 				{
-					toVisit.push ( it->second ) ;
+					toVisit.push ( it->second );
 				}
 			}
 			else
@@ -97,13 +100,14 @@ std::vector < GeoElement * > Aggregate::GetBasicElements ( )
 			}
 		}
 	}
-
+	
 	return basicElements;
 }
 
 void Aggregate::Update ( std::string name )
 {
-	std::map < std::string , GeoElement * >::iterator it = m_elements.find ( name );
+	std::map < std::string , GeoElement * >::iterator it = m_elements.find (
+		name );
 	if ( it != m_elements.end ( ) )
 	{
 		m_elements.erase ( it );

@@ -15,7 +15,8 @@ class Aggregate : public GeoElement ,
 	public Observer
 {
 public:
-	Aggregate ( std::string element , std::map < std::string , GeoElement * > & elements );
+	Aggregate ( std::string element ,
+		std::map < std::string , GeoElement * > & elements );
 	virtual ~Aggregate ( );
 	virtual void Move ( long x , long y );
 	virtual std::string Description ( );
