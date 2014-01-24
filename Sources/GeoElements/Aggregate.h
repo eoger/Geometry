@@ -3,6 +3,7 @@
 
 #include <map>
 #include <set>
+#include <vector>
 #include <string>
 
 #include "GeoElement.h"
@@ -24,7 +25,7 @@ public:
 	virtual void Update ( std::string data );
 protected:
 	std::map < std::string , GeoElement * > m_elements;
-	void GetBasicElements ( std::set < GeoElement * > & visited );
+	std::vector < GeoElement * > GetBasicElements ( );
 };
 
 #endif /* AGGREGATE_H_ */

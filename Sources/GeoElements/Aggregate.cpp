@@ -1,6 +1,8 @@
 #include "Aggregate.h"
 
 #include <sstream>
+#include <set>
+#include <stack>
 
 Aggregate::Aggregate ( std::string element , std::map < std::string , GeoElement * > & elements ) :
 	GeoElement ( element ), m_elements ( elements )
@@ -28,9 +30,8 @@ std::map < std::string , GeoElement * > Aggregate::GetElements ( )
 
 void Aggregate::Move ( long x , long y )
 {
-	std::set < GeoElement * > elements;
-	GetBasicElements ( elements );
-	for ( std::set < GeoElement * >::iterator it = elements.begin ( ) ;
+	std::vector < GeoElement * > elements = GetBasicElements ( );
+	for ( std::vector < GeoElement * >::iterator it = elements.begin ( ) ;
 		it != elements.end ( ) ; ++it )
 	{
 		( *it )->Move ( x , y );
@@ -65,21 +66,39 @@ bool Aggregate::AddElement ( GeoElement * elt )
 	}
 }
 
-void Aggregate::GetBasicElements ( std::set < GeoElement * > & visited )
+std::vector < GeoElement * > Aggregate::GetBasicElements ( )
 {
-	for ( std::map < std::string , GeoElement * >::iterator it = m_elements.begin ( ) ;
-		it != m_elements.end ( ) ; ++it )
+	std::vector < GeoElement * > basicElements;
+	std::stack < GeoElement * > toVisit;
+	std::set < GeoElement * > visited;
+
+	toVisit.push ( this );
+
+	while ( ! toVisit.empty ( ) )
 	{
-		GeoElement * el = it->second;
-		if ( Aggregate *pAggregate = dynamic_cast < Aggregate* > ( el ) )
+		GeoElement * el = toVisit.top ( );
+		toVisit.pop ( );
+
+		if ( visited.find(el) == visited.end() )
 		{
-			pAggregate->GetBasicElements ( visited );
-		}
-		else
-		{
-			visited.insert ( el );
+			visited.insert(el);
+
+			if ( Aggregate *pAggregate = dynamic_cast < Aggregate* > ( el ) )
+			{
+				for ( std::map < std::string , GeoElement * >::iterator it = pAggregate->m_elements.begin ( ) ; 
+					it != pAggregate->m_elements.end ( ) ; ++it )
+				{
+					toVisit.push ( it->second ) ;
+				}
+			}
+			else
+			{
+				basicElements.push_back ( el );
+			}
 		}
 	}
+
+	return basicElements;
 }
 
 void Aggregate::Update ( std::string name )
